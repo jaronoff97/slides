@@ -1,22 +1,49 @@
 ---
 title: AltCloud April 2026
 class: text-center
-layout: image-left
-image: /images/altcloud-apr-2026/profile.jpeg
+layout: center
+---
+
+# New Approaches for Telemetry Management
+
+### AltCloud April 2026 Meetup
+
 ---
 
 # Jacob Aronoff
 
-Founding Engineer at Tero
+<div class="mt-6 grid grid-cols-[180px_1fr] gap-8 items-center">
+  <div class="flex justify-center">
+    <img
+      src="/images/altcloud-apr-2026/profile.jpeg"
+      alt="Jacob Aronoff"
+      class="h-36 w-36 rounded-2xl object-cover border border-blue-200/40 shadow-lg"
+    />
+  </div>
+  <div class="text-left space-y-3">
+    <div class="rounded-lg border border-blue-200/35 bg-blue-50/10 px-3 py-2">
+      <div class="text-[11px] uppercase tracking-wider opacity-75">Role</div>
+      <div class="font-semibold">Founding Engineer at Tero</div>
+    </div>
+    <div class="rounded-lg border border-blue-200/35 bg-blue-50/10 px-3 py-2">
+      <div class="text-[11px] uppercase tracking-wider opacity-75">Role</div>
+      <div class="font-semibold">OpenTelemetry Maintainer</div>
+      <div class="mt-2 grid grid-cols-2 gap-2 text-sm">
+        <div class="rounded-md border border-slate-300/40 bg-slate-50/10 px-2 py-1">Operator</div>
+        <div class="rounded-md border border-slate-300/40 bg-slate-50/10 px-2 py-1">Helm Charts</div>
+        <div class="rounded-md border border-slate-300/40 bg-slate-50/10 px-2 py-1">Remote Mgmt</div>
+        <div class="rounded-md border border-slate-300/40 bg-slate-50/10 px-2 py-1">Injection</div>
+      </div>
+    </div>
+    <div class="rounded-lg border border-blue-200/35 bg-blue-50/10 px-3 py-2">
+      <div class="text-[11px] uppercase tracking-wider opacity-75">Contact</div>
+      <div class="font-semibold text-sm">jacob@usetero.com</div>
+    </div>
+  </div>
+</div>
 
-- OpenTelemetry Maintainer
-  - Operator
-  - Helm Charts
-  - Remote Management
-  - Injection
-- [bsky](https://bsky.app/profile/jaronoff.com)
-- jacob@usetero.com
-
+---
+transition: fade
 ---
 
 # Brief History of Observability
@@ -26,16 +53,18 @@ Founding Engineer at Tero
 - Traces next: request-level causality across services
 - Today: all three are necessary, but operationally fragmented
 
-<div class="absolute bottom-4 left-0 right-0 flex items-center justify-center gap-2 text-[10px] tracking-wider uppercase">
-  <span class="px-2 py-1 rounded bg-blue-600 text-white">Logs</span>
-  <span class="w-5 h-[2px] bg-gray-400"></span>
-  <span class="px-2 py-1 rounded bg-gray-200 text-gray-700">Prometheus</span>
-  <span class="w-5 h-[2px] bg-gray-400"></span>
-  <span class="px-2 py-1 rounded bg-gray-200 text-gray-700">OTel Traces</span>
-  <span class="w-5 h-[2px] bg-gray-400"></span>
-  <span class="px-2 py-1 rounded bg-gray-200 text-gray-700">OTel Unified</span>
+<div class="cd-timeline">
+  <span class="cd-chip cd-chip-active">Logs</span>
+  <span class="cd-timeline-line"></span>
+  <span class="cd-chip cd-chip-inactive">Prometheus</span>
+  <span class="cd-timeline-line"></span>
+  <span class="cd-chip cd-chip-inactive">OTel Traces</span>
+  <span class="cd-timeline-line"></span>
+  <span class="cd-chip cd-chip-inactive">OTel Unified</span>
 </div>
 
+---
+transition: fade
 ---
 
 # From Logs to Metrics (Prometheus)
@@ -46,16 +75,18 @@ Founding Engineer at Tero
 - Prometheus management can be incredibly challenging at scale, requiring
   complex architectures to prevent cardinality explosion, OOMs, etc.
 
-<div class="absolute bottom-4 left-0 right-0 flex items-center justify-center gap-2 text-[10px] tracking-wider uppercase">
-  <span class="px-2 py-1 rounded bg-gray-200 text-gray-700">Logs</span>
-  <span class="w-5 h-[2px] bg-gray-400"></span>
-  <span class="px-2 py-1 rounded bg-blue-600 text-white">Prometheus</span>
-  <span class="w-5 h-[2px] bg-gray-400"></span>
-  <span class="px-2 py-1 rounded bg-gray-200 text-gray-700">OTel Traces</span>
-  <span class="w-5 h-[2px] bg-gray-400"></span>
-  <span class="px-2 py-1 rounded bg-gray-200 text-gray-700">OTel Unified</span>
+<div class="cd-timeline">
+  <span class="cd-chip cd-chip-inactive">Logs</span>
+  <span class="cd-timeline-line"></span>
+  <span class="cd-chip cd-chip-active">Prometheus</span>
+  <span class="cd-timeline-line"></span>
+  <span class="cd-chip cd-chip-inactive">OTel Traces</span>
+  <span class="cd-timeline-line"></span>
+  <span class="cd-chip cd-chip-inactive">OTel Unified</span>
 </div>
 
+---
+transition: fade
 ---
 
 # From Metrics to Traces (OpenTelemetry)
@@ -65,16 +96,18 @@ Founding Engineer at Tero
 - OpenTelemetry standardized collection across vendors
 - Metrics/logs/traces now share common resource and attribute semantics
 
-<div class="absolute bottom-4 left-0 right-0 flex items-center justify-center gap-2 text-[10px] tracking-wider uppercase">
-  <span class="px-2 py-1 rounded bg-gray-200 text-gray-700">Logs</span>
-  <span class="w-5 h-[2px] bg-gray-400"></span>
-  <span class="px-2 py-1 rounded bg-gray-200 text-gray-700">Prometheus</span>
-  <span class="w-5 h-[2px] bg-gray-400"></span>
-  <span class="px-2 py-1 rounded bg-blue-600 text-white">OTel Traces</span>
-  <span class="w-5 h-[2px] bg-gray-400"></span>
-  <span class="px-2 py-1 rounded bg-gray-200 text-gray-700">OTel Unified</span>
+<div class="cd-timeline">
+  <span class="cd-chip cd-chip-inactive">Logs</span>
+  <span class="cd-timeline-line"></span>
+  <span class="cd-chip cd-chip-inactive">Prometheus</span>
+  <span class="cd-timeline-line"></span>
+  <span class="cd-chip cd-chip-active">OTel Traces</span>
+  <span class="cd-timeline-line"></span>
+  <span class="cd-chip cd-chip-inactive">OTel Unified</span>
 </div>
 
+---
+transition: fade
 ---
 
 # OTel as the Unifying Layer
@@ -85,14 +118,14 @@ Founding Engineer at Tero
 - Profiles are being introduced soon too!
 - Control gaps now become the next bottleneck
 
-<div class="absolute bottom-4 left-0 right-0 flex items-center justify-center gap-2 text-[10px] tracking-wider uppercase">
-  <span class="px-2 py-1 rounded bg-gray-200 text-gray-700">Logs</span>
-  <span class="w-5 h-[2px] bg-gray-400"></span>
-  <span class="px-2 py-1 rounded bg-gray-200 text-gray-700">Prometheus</span>
-  <span class="w-5 h-[2px] bg-gray-400"></span>
-  <span class="px-2 py-1 rounded bg-gray-200 text-gray-700">OTel Traces</span>
-  <span class="w-5 h-[2px] bg-gray-400"></span>
-  <span class="px-2 py-1 rounded bg-blue-600 text-white">OTel Unified</span>
+<div class="cd-timeline">
+  <span class="cd-chip cd-chip-inactive">Logs</span>
+  <span class="cd-timeline-line"></span>
+  <span class="cd-chip cd-chip-inactive">Prometheus</span>
+  <span class="cd-timeline-line"></span>
+  <span class="cd-chip cd-chip-inactive">OTel Traces</span>
+  <span class="cd-timeline-line"></span>
+  <span class="cd-chip cd-chip-active">OTel Unified</span>
 </div>
 
 ---
@@ -125,14 +158,14 @@ Founding Engineer at Tero
     v-motion
     :initial="{ y: 20, opacity: 0 }"
     :enter="{ y: 0, opacity: 1, transition: { duration: 500 } }"
-    class="rounded-xl bg-gradient-to-b from-red-50 to-white border border-red-200 p-4"
+    class="rounded-xl cd-cost-card cd-cost-card-red p-4"
   >
-    <h3 class="text-sm uppercase tracking-wider text-red-700 mb-3">Debug Log Accident</h3>
-    <div class="border-l-2 border-red-300 pl-3 space-y-3">
-      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full bg-red-500" />Debug log intended for dev only.</p>
-      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full bg-red-500" />Config leak deploys it to prod.</p>
-      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full bg-red-500" />Log volume spikes in hot paths.</p>
-      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full bg-red-700" /><span v-mark.red>Ingest cost explodes</span> before anyone catches it.</p>
+    <h3 class="text-sm uppercase tracking-wider cd-cost-title mb-3">Debug Log Accident</h3>
+    <div class="border-l-2 cd-cost-track pl-3 space-y-3">
+      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full cd-cost-dot" />Debug log intended for dev only.</p>
+      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full cd-cost-dot" />Config leak deploys it to prod.</p>
+      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full cd-cost-dot" />Log volume spikes in hot paths.</p>
+      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full cd-cost-dot-strong" /><span v-mark.red>Ingest cost explodes</span> before anyone catches it.</p>
     </div>
   </div>
 
@@ -140,14 +173,14 @@ Founding Engineer at Tero
     v-motion
     :initial="{ y: 20, opacity: 0 }"
     :enter="{ y: 0, opacity: 1, transition: { duration: 500, delay: 150 } }"
-    class="rounded-xl bg-gradient-to-b from-orange-50 to-white border border-orange-200 p-4"
+    class="rounded-xl cd-cost-card cd-cost-card-orange p-4"
   >
-    <h3 class="text-sm uppercase tracking-wider text-orange-700 mb-3">AI PR Cardinality Blast</h3>
-    <div class="border-l-2 border-orange-300 pl-3 space-y-3">
-      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full bg-orange-500" />AI-generated PR adds high-cardinality labels.</p>
-      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full bg-orange-500" />Cardinality ramps rapidly in production.</p>
-      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full bg-orange-500" />Prometheus / Datadog Agent gets overloaded.</p>
-      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full bg-orange-700" /><span v-mark.orange>Reliability drops + cost spikes</span> at the same time.</p>
+    <h3 class="text-sm uppercase tracking-wider cd-cost-title mb-3">AI PR Cardinality Blast</h3>
+    <div class="border-l-2 cd-cost-track pl-3 space-y-3">
+      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full cd-cost-dot" />AI-generated PR adds high-cardinality labels.</p>
+      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full cd-cost-dot" />Cardinality ramps rapidly in production.</p>
+      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full cd-cost-dot" />Prometheus / Datadog Agent gets overloaded.</p>
+      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full cd-cost-dot-strong" /><span v-mark.orange>Reliability drops + cost spikes</span> at the same time.</p>
     </div>
   </div>
 
@@ -155,14 +188,14 @@ Founding Engineer at Tero
     v-motion
     :initial="{ y: 20, opacity: 0 }"
     :enter="{ y: 0, opacity: 1, transition: { duration: 500, delay: 300 } }"
-    class="rounded-xl bg-gradient-to-b from-purple-50 to-white border border-purple-200 p-4"
+    class="rounded-xl cd-cost-card cd-cost-card-purple p-4"
   >
-    <h3 class="text-sm uppercase tracking-wider text-purple-700 mb-3">Renewal Trap</h3>
-    <div class="border-l-2 border-purple-300 pl-3 space-y-3">
-      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full bg-purple-500" />Datadog overages keep repeating.</p>
-      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full bg-purple-500" />SRE/Ops spends a month cleaning pipelines.</p>
-      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full bg-purple-500" />Usage improves, dashboards stabilize.</p>
-      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full bg-purple-700" /><span v-mark.purple>Renewal still comes in higher.</span></p>
+    <h3 class="text-sm uppercase tracking-wider cd-cost-title mb-3">Renewal Trap</h3>
+    <div class="border-l-2 cd-cost-track pl-3 space-y-3">
+      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full cd-cost-dot" />Datadog overages keep repeating.</p>
+      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full cd-cost-dot" />SRE/Ops spends a month cleaning pipelines.</p>
+      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full cd-cost-dot" />Usage improves, dashboards stabilize.</p>
+      <p v-click class="relative"><span class="absolute -left-[17px] top-1.5 w-2 h-2 rounded-full cd-cost-dot-strong" /><span v-mark.purple>Renewal still comes in higher.</span></p>
     </div>
   </div>
 </div>
@@ -310,7 +343,7 @@ end
 <div class="grid grid-cols-2 gap-5 mt-2 text-left text-sm">
   <div class="rounded-xl border border-rose-200 bg-rose-50 p-4">
     <div class="font-semibold mb-2">1) Configurations grow organically</div>
-    <ul class="space-y-1">
+    <ul class="raw-list list-disc pl-5 space-y-1">
       <li>Pipeline config starts small, then grows to thousands of lines.</li>
       <li>Each line solved a past incident, but the reasoning is no longer visible.</li>
       <li>Changes become risky because config encodes hidden institutional knowledge.</li>
@@ -318,7 +351,7 @@ end
   </div>
   <div class="rounded-xl border border-orange-200 bg-orange-50 p-4">
     <div class="font-semibold mb-2">2) Changes require global reasoning</div>
-    <ul class="space-y-1">
+    <ul class="raw-list list-disc pl-5 space-y-1">
       <li>To edit one rule safely, you must understand the full DAG.</li>
       <li>As config grows, cognitive load rises and reviews get superficial.</li>
       <li>Controlling servers must parse each component's config semantics.</li>
@@ -329,7 +362,7 @@ end
 <div class="grid grid-cols-2 gap-5 mt-4 text-left text-sm">
   <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
     <div class="font-semibold mb-2">3) Configurations do not scale</div>
-    <ul class="space-y-1">
+    <ul class="raw-list list-disc pl-5 space-y-1">
       <li>100 noisy patterns is feasible.</li>
       <li>1,000 degrades performance.</li>
       <li>10,000 is impractical in sequential pipelines, so teams over-drop and lose signal.</li>
@@ -337,7 +370,7 @@ end
   </div>
   <div class="rounded-xl border border-violet-200 bg-violet-50 p-4">
     <div class="font-semibold mb-2">4) Remote control lacks guarantees</div>
-    <ul class="space-y-1">
+    <ul class="raw-list list-disc pl-5 space-y-1">
       <li>Dynamic behavior is not guaranteed with file-based config + OpAMP paths.</li>
       <li>Collector distributions can define custom config formats.</li>
       <li>A controller cannot assume one universal, safe runtime update model.</li>
@@ -371,10 +404,10 @@ end
   <div class="rounded-xl border border-slate-300 p-4">
     <div class="font-semibold mb-2">Spec Guarantees</div>
     <div class="flex flex-wrap gap-2">
-      <span class="px-2 py-1 rounded bg-slate-100">self-contained</span>
-      <span class="px-2 py-1 rounded bg-slate-100">idempotent</span>
-      <span class="px-2 py-1 rounded bg-slate-100">fail-open</span>
-      <span class="px-2 py-1 rounded bg-slate-100">deterministic</span>
+      <span class="cd-pill">self-contained</span>
+      <span class="cd-pill">idempotent</span>
+      <span class="cd-pill">fail-open</span>
+      <span class="cd-pill">deterministic</span>
     </div>
   </div>
   <div class="rounded-xl border border-slate-300 p-4">
@@ -665,9 +698,22 @@ flowchart LR
 
 # Future Experiments
 
-- Extend policy actions beyond filter/sample/transform
-- Improve policy distribution and precompiled snapshot delivery
-- Push evaluation closer to source and cluster boundaries
+<div class="grid grid-cols-2 gap-6 items-center mt-2">
+  <div class="grid gap-2 text-left text-sm">
+    <div class="rounded-lg border border-blue-200 bg-blue-50 p-3">
+      Extend policy actions beyond filter/sample/transform into richer analysis and control primitives.
+    </div>
+    <div class="rounded-lg border border-violet-200 bg-violet-50 p-3">
+      Improve policy distribution with precompiled snapshots and safer incremental rollouts.
+    </div>
+    <div class="rounded-lg border border-amber-200 bg-amber-50 p-3">
+      Push evaluation closer to sources and cluster boundaries to reduce egress and response time.
+    </div>
+    <div class="rounded-lg border border-emerald-200 bg-emerald-50 p-3">
+      Use results from local and in-cluster analysis to assist policy generation loops.
+    </div>
+  </div>
+</div>
 
 ---
 
@@ -689,11 +735,13 @@ flowchart LR
     </div>
   </div>
   <div class="flex justify-center">
+    <div class="rounded-xl bg-white p-4 shadow-md">
     <img
       src="https://docs.vortex.dev/_images/vortex_wordmark.svg"
       alt="Vortex wordmark"
       class="w-full max-w-md object-contain"
     />
+    </div>
   </div>
 </div>
 

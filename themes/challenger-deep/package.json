@@ -1,0 +1,22 @@
+{
+  "name": "slidev-theme-challenger-deep-local",
+  "version": "0.0.1",
+  "private": true,
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "engines": {
+    "slidev": ">=52.0.0"
+  },
+  "slidev": {
+    "colorSchema": "dark",
+    "defaults": {
+      "fonts": {
+        "sans": "Inter",
+        "serif": "IBM Plex Serif",
+        "mono": "JetBrains Mono"
+      }
+    }
+  }
+}
