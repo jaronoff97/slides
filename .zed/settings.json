@@ -1,0 +1,13 @@
+{
+  "languages": {
+    "Markdown": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "/Users/jea/Code/slides/scripts/slidev-zed-format.sh",
+          "arguments": ["{buffer_path}"]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# Slidev decks contain per-slide frontmatter blocks that generic markdown formatters can rewrite
+slides.md
+altcloud-april-2026.md
+decks/**/*.md

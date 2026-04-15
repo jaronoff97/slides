@@ -1,0 +1,19 @@
+{
+  "name": "jaronoff97-slides",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export",
+    "dev:altcloud-apr-2026": "slidev altcloud-april-2026.md --open",
+    "build:altcloud-apr-2026": "slidev build altcloud-april-2026.md",
+    "export:altcloud-apr-2026": "slidev export altcloud-april-2026.md"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.14.2",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "vue": "^3.5.29"
+  }
+}
