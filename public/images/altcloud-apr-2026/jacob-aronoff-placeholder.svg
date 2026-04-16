@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" role="img" aria-label="Jacob Aronoff placeholder">
+  <rect width="1200" height="1500" fill="#e5e7eb"/>
+  <rect x="80" y="80" width="1040" height="1340" rx="24" fill="#d1d5db" stroke="#9ca3af" stroke-width="6"/>
+  <circle cx="600" cy="560" r="180" fill="#9ca3af"/>
+  <rect x="320" y="820" width="560" height="420" rx="180" fill="#9ca3af"/>
+  <text x="600" y="1320" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" fill="#374151">Replace with headshot</text>
+</svg>
