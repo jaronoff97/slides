@@ -835,8 +835,14 @@ class: text-center
     </div>
   </div>
 
-  <div class="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
-    <div class="font-semibold mb-1">We are hiring</div>
-    <div>If this resonates, come build with us at Tero.</div>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+      <div class="font-semibold mb-1">We are hiring</div>
+      <div>If this resonates, come build with us at Tero.</div>
+    </div>
+    <div class="rounded-xl border border-blue-200 bg-blue-50 p-4">
+      <div class="font-semibold mb-1">Company</div>
+      <div><a href="https://usetero.com" target="_blank">usetero.com</a></div>
+    </div>
   </div>
 </div>
