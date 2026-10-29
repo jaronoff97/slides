@@ -8,7 +8,10 @@
     "export": "slidev export",
     "dev:altcloud-apr-2026": "slidev altcloud-april-2026.md --open",
     "build:altcloud-apr-2026": "slidev build altcloud-april-2026.md",
-    "export:altcloud-apr-2026": "slidev export altcloud-april-2026.md"
+    "export:altcloud-apr-2026": "slidev export altcloud-april-2026.md",
+    "dev:kubecon-na-2026": "slidev kubecon-na-2026.md --open",
+    "build:kubecon-na-2026": "slidev build kubecon-na-2026.md",
+    "export:kubecon-na-2026": "slidev export kubecon-na-2026.md"
   },
   "dependencies": {
     "@slidev/cli": "^52.14.2",
