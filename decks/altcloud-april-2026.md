@@ -418,6 +418,37 @@ end
 
 ---
 
+# Policies: Adoption & Roadmap
+
+<div class="grid grid-cols-2 gap-5 mt-4 text-left text-sm">
+  <div class="rounded-xl border border-blue-200 bg-blue-50 p-4">
+    <div class="text-xs uppercase tracking-wider text-blue-700 mb-2">Official</div>
+    <div class="font-semibold mb-2">Part of OpenTelemetry</div>
+    <div class="opacity-80">Telemetry policies are officially part of OpenTelemetry.</div>
+  </div>
+  <div class="rounded-xl border border-violet-200 bg-violet-50 p-4">
+    <div class="text-xs uppercase tracking-wider text-violet-700 mb-2">Native implementations</div>
+    <div class="font-semibold mb-2">Google, Elastic &amp; more</div>
+    <div class="opacity-80">Companies are implementing policies natively, including in Google Cloud (GCP).</div>
+  </div>
+  <div class="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+    <div class="text-xs uppercase tracking-wider text-emerald-700 mb-2">Integration underway</div>
+    <div class="font-semibold mb-2">Collector → SDKs</div>
+    <div class="opacity-80">Policies are being integrated into the OpenTelemetry Collector, with Java and Python SDK support planned.</div>
+  </div>
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+    <div class="text-xs uppercase tracking-wider text-amber-700 mb-2">Planned</div>
+    <div class="font-semibold mb-2">Prometheus runtime</div>
+    <div class="opacity-80">Policies will be added to the Prometheus runtime to enable metrics use cases at high scale.</div>
+  </div>
+</div>
+
+<div class="mt-4 text-xs opacity-70">
+  <a href="https://github.com/open-telemetry/opentelemetry-specification/blob/main/oteps/4738-telemetry-policy.md" target="_blank" rel="noreferrer">OpenTelemetry proposal: OTEP 4738 — Telemetry Policies</a>
+</div>
+
+---
+
 # Policy Architecture
 
 ```mermaid {scale: 0.65}
