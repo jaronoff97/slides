@@ -67,20 +67,6 @@ transition: fade
 
 # Agenda
 
-<div class="cd-timeline">
-  <span class="cd-chip cd-chip-active">Why Quality</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Incident</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Semconv</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Weaver</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Gaps</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Policies</span>
-</div>
-
 - Why telemetry quality matters
 - An incident, told through bad telemetry
 - Semantic conventions: what they are and how OTel makes them
@@ -88,6 +74,8 @@ transition: fade
 - What the ecosystem is still missing
 - Policies: enforcement everywhere telemetry flows
 
+---
+section: Why Quality
 ---
 
 # Why Is Telemetry Quality Important?
@@ -177,23 +165,10 @@ Let the room find as many as possible before clicking through. Count how many th
 
 ---
 transition: fade
+section: Incident
 ---
 
 # Poor Telemetry Quality: An Incident
-
-<div class="cd-timeline">
-  <span class="cd-chip cd-chip-inactive">Why Quality</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-active">Incident</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Semconv</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Weaver</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Gaps</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Policies</span>
-</div>
 
 <div class="mt-2 space-y-3 text-left">
   <div class="rounded-lg border border-slate-300 p-3" v-click>
@@ -285,23 +260,10 @@ Ask someone with 4+ to share their worst one.
 
 ---
 transition: fade
+section: Semconv
 ---
 
 # What Is a Semantic Convention?
-
-<div class="cd-timeline">
-  <span class="cd-chip cd-chip-inactive">Why Quality</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Incident</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-active">Semconv</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Weaver</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Gaps</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Policies</span>
-</div>
 
 <div class="grid grid-cols-2 gap-6 mt-2 text-left">
   <div class="text-sm space-y-3">
@@ -395,22 +357,10 @@ flowchart LR
 </div>
 
 ---
+section: Weaver
+---
 
 # Weaver: Observability by Design
-
-<div class="cd-timeline">
-  <span class="cd-chip cd-chip-inactive">Why Quality</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Incident</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Semconv</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-active">Weaver</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Gaps</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Policies</span>
-</div>
 
 <div class="grid grid-cols-[1.4fr_1fr] gap-5 mt-1 text-left">
 <div style="--slidev-code-font-size: 0.62rem">
@@ -459,23 +409,10 @@ Most rooms land on "code review" and "the bill". Use that to set up the gaps sec
 
 ---
 transition: fade
+section: Gaps
 ---
 
 # What Is Missing in the Ecosystem?
-
-<div class="cd-timeline">
-  <span class="cd-chip cd-chip-inactive">Why Quality</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Incident</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Semconv</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Weaver</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-active">Gaps</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Policies</span>
-</div>
 
 <div class="grid grid-cols-3 gap-5 text-left text-[13px] leading-5 mt-2">
   <div
@@ -580,23 +517,10 @@ end
 
 ---
 transition: fade
+section: Policies
 ---
 
 # What Are Policies?
-
-<div class="cd-timeline">
-  <span class="cd-chip cd-chip-inactive">Why Quality</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Incident</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Semconv</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Weaver</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-inactive">Gaps</span>
-  <span class="cd-timeline-line"></span>
-  <span class="cd-chip cd-chip-active">Policies</span>
-</div>
 
 <div class="grid grid-cols-3 gap-4 mt-2 text-left text-sm">
   <div class="rounded-xl border border-blue-200 bg-blue-50 p-4">
@@ -689,11 +613,13 @@ transition: fade
 
 # Weaver + Policies: Design Time Meets Run Time
 
+<div class="absolute top-[104px] right-12 rotate-[-6deg] rounded-md border-2 border-amber-400 px-3 py-1 text-sm font-bold uppercase tracking-widest text-amber-300 shadow-lg">Future State</div>
+
 ```mermaid {scale: 0.62}
 flowchart LR
   REG["📘 Org registry<br/>(extends semconv)"] -->|weaver registry check| CI["✅ CI"]
   REG -->|weaver registry generate| CODE["🧩 SDK constants"]
-  REG -->|weaver registry generate| POL["📜 Policies<br/>rename · redact · drop"]
+  REG -.->|"weaver registry generate (future)"| POL["📜 Policies<br/>rename · redact · drop"]
   POL --> SDK["⚙️ SDK"]
   POL --> COL["⚙️ Collector"]
   POL --> PROM["⚙️ Prometheus"]
@@ -701,11 +627,13 @@ flowchart LR
   COL --> LC
   PROM --> LC
   LC -.->|new violations| REG
+  classDef future stroke:#fbbf24,stroke-dasharray:5 4;
+  class POL future;
 ```
 
 <div class="grid grid-cols-3 gap-3 mt-3 text-xs text-left">
   <div v-click class="rounded-lg border border-blue-200 bg-blue-50 p-3">The registry is the one source of truth for names, types and sensitive fields.</div>
-  <div v-click class="rounded-lg border border-violet-200 bg-violet-50 p-3">Weaver templates can render policies, the same way they render code and docs.</div>
+  <div v-click class="rounded-lg border border-violet-200 bg-violet-50 p-3"><strong>Not possible yet:</strong> Weaver cannot generate policies today. The goal is templates that render policies, the same way they render code and docs.</div>
   <div v-click class="rounded-lg border border-emerald-200 bg-emerald-50 p-3">Policies enforce the registry on telemetry you do not own.</div>
 </div>
 
@@ -760,24 +688,24 @@ TODO: add current numbers (records/sec at 10 / 1k / 10k policies, OTTL baseline)
 
 <div class="grid grid-cols-2 gap-5 mt-4 text-left text-sm">
   <div class="rounded-xl border border-blue-200 bg-blue-50 p-4">
-    <div class="text-xs uppercase tracking-wider text-blue-700 mb-2">Official</div>
-    <div class="font-semibold mb-2">Part of OpenTelemetry</div>
-    <div class="opacity-80">Telemetry policies are officially part of OpenTelemetry.</div>
+    <div class="text-xs uppercase tracking-wider text-blue-700 mb-2">Accepted</div>
+    <div class="font-semibold mb-2">OTEP in the specification</div>
+    <div class="opacity-80">The Policies OTEP was accepted into the OpenTelemetry specification.</div>
   </div>
   <div class="rounded-xl border border-violet-200 bg-violet-50 p-4">
-    <div class="text-xs uppercase tracking-wider text-violet-700 mb-2">Native implementations</div>
-    <div class="font-semibold mb-2">Google, Elastic &amp; more</div>
-    <div class="opacity-80">Companies are implementing policies natively, including in Google Cloud (GCP).</div>
+    <div class="text-xs uppercase tracking-wider text-violet-700 mb-2">In development</div>
+    <div class="font-semibold mb-2">Formal proto + spec</div>
+    <div class="opacity-80">A formal proto structure and specification are in active development.</div>
   </div>
   <div class="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
     <div class="text-xs uppercase tracking-wider text-emerald-700 mb-2">Libraries</div>
     <div class="font-semibold mb-2">Go, Rust, Zig</div>
-    <div class="opacity-80"><code>usetero/policy-go</code>, <code>policy-rs</code>, <code>policy-zig</code>. Collector and SDK integrations underway.</div>
+    <div class="opacity-80">Sample libraries exist today. Native support in the Collector is coming soon.</div>
   </div>
   <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
-    <div class="text-xs uppercase tracking-wider text-amber-700 mb-2">Next</div>
-    <div class="font-semibold mb-2">More stages</div>
-    <div class="opacity-80">Metric renames, aggregation and span rollups follow the same spec process.</div>
+    <div class="text-xs uppercase tracking-wider text-amber-700 mb-2">Get involved</div>
+    <div class="font-semibold mb-2">#otel-policies</div>
+    <div class="opacity-80">Join <code>#otel-policies</code> on CNCF Slack to contribute and share your thoughts!</div>
   </div>
 </div>
 
@@ -795,7 +723,7 @@ class: text-center
 <div class="mt-6 grid grid-cols-2 gap-4 max-w-4xl mx-auto text-left text-sm">
   <div class="rounded-xl border border-blue-200 bg-blue-50 p-4">Where should enforcement live: <strong>SDK, Collector, or backend</strong>?</div>
   <div class="rounded-xl border border-violet-200 bg-violet-50 p-4">Who owns your telemetry registry: <strong>platform, SRE, or each team</strong>?</div>
-  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">A violation shows up in prod. Do you <strong>drop it, fix it, or flag it</strong>?</div>
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">What do you want to use <strong>policies</strong> for?</div>
   <div class="rounded-xl border border-emerald-200 bg-emerald-50 p-4">Which semconv area is <strong>missing</strong> for your workloads?</div>
 </div>
 
@@ -821,8 +749,8 @@ class: text-center
     <a href="https://usetero.com/blog/policies-deep-dive" target="_blank">Deep Dive</a>
   </div>
   <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
-    <div class="text-xs uppercase tracking-wide text-amber-700 font-semibold">Tero</div>
-    <a href="https://usetero.com" target="_blank">usetero.com</a> · We are hiring
+    <div class="text-xs uppercase tracking-wide text-amber-700 font-semibold">CNCF Slack</div>
+    <a href="https://slack.cncf.io" target="_blank">#otel-policies</a>
   </div>
 </div>
 
